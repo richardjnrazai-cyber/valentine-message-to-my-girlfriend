@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine Asa ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8em;
+}
+
+.flowers {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff4d6d;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffe3ec;
+    transform: scale(1.1);
+}
+
+/* falling flowers */
+.flower {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>Happy Valentine's Day My Beautiful Asa 🌸❤️</h1>
+
+    <div class="flowers">🌹🌸🌷💐🌺</div>
+
+    <div class="message">
+        My dearest Faith, my sweet Asa,<br><br>
+        From the moment you came into my life, everything became brighter and more beautiful.  
+        You are my happiness, my peace, and the love I prayed for.  
+        Every smile of yours fills my heart with joy I cannot explain. 💕<br><br>
+        I love you more than words can ever truly say.  
+        I cannot wait to spend the rest of our lives together — growing, laughing, dreaming, and building our forever side by side.  
+        You are my today, my tomorrow, and my always.<br><br>
+        Happy Valentine’s Day, my love.<br>
+        Forever yours,<br>
+        Richard ❤️
+    </div>
+
+    <button onclick="showLove()">Click For My Heart 💌</button>
+
+    <!-- Photo Gallery -->
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Our Memory 1">
+        <img src="photo2.jpg" alt="Our Memory 2">
+        <img src="photo3.jpg" alt="Our Memory 3">
+    </div>
+
+</div>
+
+<script>
+function showLove() {
+    alert("Asa, I choose you today, tomorrow, and for the rest of my life. I love you ❤️ - Richard");
+}
+
+// create falling flowers
+function createFlower() {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 8000);
+}
+
+setInterval(createFlower, 500);
+</script>
+
+</body>
+</html>
